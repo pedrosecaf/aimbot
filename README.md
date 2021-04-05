@@ -49,8 +49,10 @@ The Arduino code was written using C++
 
 Imports the IRremote library (Version 2.0)
 
-### Line 4
+#### Line 4
 
 Creates a variable to store the receiver pin
+
+#### Line 6
 
 ## Final Product
