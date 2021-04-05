@@ -163,7 +163,7 @@ Pauses the program for 500 miliseconds.
 
 ###### Lines 84-95
 
-If the robot is powered on, the distance is equal to or less than 20 cm, and the robot is stationary, the function forward() is called with the last configured velocity as argument (the robot is instructed to start moving). Also, if the robot is powered on, the distance is more than 20 cm, and the robot is moving, the function forward() is called with 0 as argument (the robot is istructed to stop).
+If the robot is powered on, the distance is equal to or less than 20 cm, and the robot is stationary, the function forward() is called with the last configured velocity as argument (the robot is instructed to start moving). Also, if the robot is powered on, the distance is more than 20 cm, and the robot is moving, the function forward() is called with 0 as argument (the robot is instructed to stop).
 
 #### Lines 96-97
 
