@@ -192,3 +192,7 @@ If the hexadecimal number is equal to 0xFF22DD, it means that the turn left butt
 #### Lines 131-133
 
 Waits for 500 miliseconds and resumes the process of receiving IR signals.
+
+## Video
+
+Link: https://usfedu-my.sharepoint.com/:v:/g/personal/psecafrodrig_usf_edu/EbqxybTKl19HhzCr1qYRJEsBZZM-fB5Hkg3UIJMVThhR2w?e=Bdx7mp
