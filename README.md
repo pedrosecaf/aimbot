@@ -45,6 +45,8 @@ The project consists of a 4-wheeled robot (2 motorized and 2 independent wheels)
 
 The Arduino code was written using C++
 
+### Main
+
 #### Lines 1-2
 
 Imports the IRremote library (Version 2.0).
@@ -73,16 +75,13 @@ Initializes the variables duration_us and distance_cm, which will be used later.
 
 Defines the variables power, velocity, and moving to control the robot's operations.
 
-
 Power = 0 indicates that the robot is powered off
 
 Power = 1 indicates that the robot is powered on
 
-
 Velocity = 255 indicates that the robot is configured to move at high speed
 
 Velocity = 150 indicates that the robot is configured to move at low speed
-
 
 Moving = 0 indicates that 
 
@@ -98,10 +97,12 @@ Defines the variables low_speed and high_speed as 155 and 255, respectively.
 
 #### Line 27
 
-Initializes the definition of the setup() function, which is called when a sketch starts. It is used to initialize variables, pin modes, start using libraries, etc. The setup() function will only run once, after each powerup or reset of the Arduino board (https://www.arduino.cc/reference/tr/language/structure/sketch/setup/). Lines 28-42 consist of the definition of the setup() function.
+Initializes the definition of the setup() function, which is called when a sketch starts. It is used to initialize variables, pin modes, start using libraries, etc. The setup() function will only run once, after each powerup or reset of the Arduino board (https://www.arduino.cc/reference/tr/language/structure/sketch/setup/).
+
+### setup()
 
 #### Lines 28-31
 
-
+Configures the motor pins as output.
 
 ## Final Product
