@@ -1,30 +1,58 @@
 #include <IRremote.h>
 #include <IRremoteInt.h>
 
-int RECV_PIN = 6;
+void forward (int vel) {
+  Serial.print("Forward: ");
+  Serial.println(vel);
+  digitalWrite(motor1pin2, LOW);
+  digitalWrite(motor2pin2, LOW);  
+  analogWrite(5, vel);
+  analogWrite(9, vel);
+  if ( vel != 0 ) {
+    moving = 1;
+  } else {
+    moving = 0;
+  }
+}
 
-IRrecv irrecv(RECV_PIN);
+void right () {
+  digitalWrite(motor1pin2, LOW);
+  digitalWrite(motor2pin2, LOW);  
+  analogWrite(5, low_speed);
+  analogWrite(9, 255);
+}
 
-decode_results results;
-
-int trigPin = 12;
-int echoPin = 11;
-
-float duration_us, distance_cm;
-
-int power = 0;
-int velocity = 255;
-int moving = 0;
-
-int motor1pin1 = 9;
-int motor1pin2 = 8;
-int motor2pin1 = 5;
-int motor2pin2 = 4;
-
-int low_speed = 150;
-int high_speed = 255;
+void left () {
+  digitalWrite(motor1pin2, LOW);
+  digitalWrite(motor2pin2, LOW);  
+  analogWrite(5, 255);
+  analogWrite(9, low_speed);
+}
 
 void setup() {
+  int RECV_PIN = 6;
+  
+  IRrecv irrecv(RECV_PIN);
+
+  decode_results results;
+
+  int trigPin = 12;
+  int echoPin = 11;
+
+  float duration_us, distance_cm;
+
+  int power = 0;
+  int velocity = 255;
+  int moving = 0;
+
+  int motor1pin1 = 9;
+  int motor1pin2 = 8;
+  int motor2pin1 = 5;
+  int motor2pin2 = 4;
+
+  int low_speed = 150;
+  int high_speed = 255;
+  
   pinMode(motor1pin1, OUTPUT);
   pinMode(motor1pin2, OUTPUT);
   pinMode(motor2pin1, OUTPUT);
@@ -102,34 +130,4 @@ void loop() {
   
   delay(500);
   irrecv.resume(); // Receive the next value
-}
-
-void forward (int vel) {
-  Serial.print("Forward: ");
-  Serial.println(vel);
-  digitalWrite(motor1pin2, LOW);
-  digitalWrite(motor2pin2, LOW);  
-  analogWrite(5, vel);
-  analogWrite(9, vel);
-  if ( vel != 0 ) {
-    moving = 1;
-  } else {
-    moving = 0;
-  }
-}
-
-void right () {
-  digitalWrite(motor1pin2, LOW);
-  digitalWrite(motor2pin2, LOW);  
-
-  analogWrite(5, low_speed);
-  analogWrite(9, 255);
-}
-
-void left () {
-  digitalWrite(motor1pin2, LOW);
-  digitalWrite(motor2pin2, LOW);  
-
-  analogWrite(5, 255);
-  analogWrite(9, low_speed);
 }
