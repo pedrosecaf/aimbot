@@ -93,7 +93,6 @@ void loop() {
     delay(500);
     forward(velocity);
   }
-
   if (results.value == 0xFF22DD) {
     Serial.println("Turn Left");
     left();
