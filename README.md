@@ -45,8 +45,6 @@ The project consists of a 4-wheeled robot (2 motorized and 2 independent wheels)
 
 The Arduino code was written using C++
 
-### Main
-
 #### Lines 1-3
 
 Imports the IRremote library (Version 2.0).
