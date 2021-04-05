@@ -22,9 +22,9 @@ int motor2pin1 = 5;
 int motor2pin2 = 4;
 
 int low_speed = 150;
+int high_speed = 255;
 
 void setup() {
-  // put your setup code here, to run once:
   pinMode(motor1pin1, OUTPUT);
   pinMode(motor1pin2, OUTPUT);
   pinMode(motor2pin1, OUTPUT);
@@ -43,7 +43,6 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   while (irrecv.decode(&results) == 0){
     digitalWrite(trigPin, HIGH);
     delayMicroseconds(10);
