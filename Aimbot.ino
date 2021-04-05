@@ -7,7 +7,6 @@ IRrecv irrecv(RECV_PIN);
 
 decode_results results;
 
-
 int trigPin = 12;    // connect TRIG pin to Arduino pin 12
 int echoPin = 11;    // connect ECHO pin to Arduino pin 11
 float duration_us, distance_cm;
@@ -20,7 +19,6 @@ int motor1pin1 = 9;
 int motor1pin2 = 8;
 int motor2pin1 = 5;
 int motor2pin2 = 4;
-
 
 int low_speed = 150;
 
@@ -107,13 +105,11 @@ void loop() {
   irrecv.resume(); // Receive the next value
 }
 
-
 void forward (int vel) {
   Serial.print("Forward: ");
   Serial.println(vel);
   digitalWrite(motor1pin2, LOW);
   digitalWrite(motor2pin2, LOW);  
-
   analogWrite(5, vel);
   analogWrite(9, vel);
   if ( vel != 0 ) {
@@ -129,7 +125,6 @@ void right () {
 
   analogWrite(5, low_speed);
   analogWrite(9, 255);
-
 }
 
 void left () {
@@ -138,5 +133,4 @@ void left () {
 
   analogWrite(5, 255);
   analogWrite(9, low_speed);
-
 }
