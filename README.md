@@ -131,23 +131,23 @@ Initializes the definition of the loop() function, which loops consecutively, al
 
 Creates a while loop to iterate until a button is clicked on the remote controller.
 
-##### Lines 47-49
+###### Lines 47-49
 
 Generates a 10-microsecond pulse to trigPin.
 
-##### Line 50
+###### Line 50
 
 Measures the duration of pulse from echoPin.
 
-##### Line 51
+###### Line 51
 
 Calculates the distance between the robot and the object/human.
 
-##### Lines 52-54
+###### Lines 52-54
 
 Prints the distance to the serial monitor.
 
-##### Line 55
+###### Line 55
 
 Pauses the program for 500 miliseconds.
 
