@@ -7,8 +7,9 @@ IRrecv irrecv(RECV_PIN);
 
 decode_results results;
 
-int trigPin = 12;    // connect TRIG pin to Arduino pin 12
-int echoPin = 11;    // connect ECHO pin to Arduino pin 11
+int trigPin = 12;
+int echoPin = 11;
+
 float duration_us, distance_cm;
 
 int power = 0;
