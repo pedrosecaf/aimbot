@@ -6,8 +6,8 @@ void forward (int vel) {
   Serial.println(vel);
   digitalWrite(motor1pin2, LOW);
   digitalWrite(motor2pin2, LOW);  
-  analogWrite(5, vel);
-  analogWrite(9, vel);
+  analogWrite(motor2pin1, vel);
+  analogWrite(motor1pin1, vel);
   if ( vel != 0 ) {
     moving = 1;
   } else {
@@ -18,15 +18,15 @@ void forward (int vel) {
 void right () {
   digitalWrite(motor1pin2, LOW);
   digitalWrite(motor2pin2, LOW);  
-  analogWrite(5, low_speed);
-  analogWrite(9, 255);
+  analogWrite(motor2pin1, low_speed);
+  analogWrite(motor1pin1, high_speed);
 }
 
 void left () {
   digitalWrite(motor1pin2, LOW);
   digitalWrite(motor2pin2, LOW);  
-  analogWrite(5, 255);
-  analogWrite(9, low_speed);
+  analogWrite(motor2pin1, high_speed);
+  analogWrite(motor1pin1, low_speed);
 }
 
 void setup() {
