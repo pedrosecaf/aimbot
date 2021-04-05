@@ -53,15 +53,15 @@ Imports the IRremote library (Version 2.0).
 
 #### Lines 4-17
 
-forward
+Defines a forward() function that accepts a speed value as parameter. The program prints the speed to the serial monitor, digitally sets motor1pin2 and motor2pin2 with low voltage (0V), and sets the voltage of motor2pin1 and motor1pin1 to the speed value passed as argument. If the speed value is greater than 0, the program updated the variable moving to 1. Otherwise, it updates the variable moving to 0. In short, the forward() function instructs the robot to move forward with a configured speed.
 
 #### Lines 18-24
 
-right
+Defines a right() function. The program digitally sets motor1pin2 and motor2pin2 with low voltage (0V), and sets the voltage of motor2pin1 and motor1pin1 to low_speed and high_speed, respectively. In short, the right() function instructs the robot to turn right.
 
 #### Lines 25-31
 
-left
+Defines a left() function. The program digitally sets motor1pin2 and motor2pin2 with low voltage (0V), and sets the voltage of motor2pin1 and motor1pin1 to high_speed and low_speed, respectively. In short, the left() function instructs the robot to turn left.
 
 ### setup()
 
