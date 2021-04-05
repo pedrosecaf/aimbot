@@ -47,12 +47,28 @@ The Arduino code was written using C++
 
 #### Lines 1-2
 
-Imports the IRremote library (Version 2.0)
+Imports the IRremote library (Version 2.0).
 
 #### Line 4
 
-Creates a variable to store the receiver pin
+Defines the Arduino pin that will receive the signals from the IR receiver.
 
 #### Line 6
+
+Enables the receiver pin to receive signals from the remote controller.
+
+#### Line 8
+
+Stores the information emitted by the remote controler.
+
+#### Lines 10-11
+
+Defines the Arduino pins that will work as Trigger and Echo pins. Trigger pin is used to trigger the ultrasonic sound pulses. Echo pin produces a pulse when the reflected signal is received. The length of the pulse is proportional to the time it took for the transmitted signal to be detected (https://lastminuteengineers.com/arduino-sr04-ultrasonic-sensor-tutorial/).
+
+#### Line 13
+
+Initializes the variables duration_us and distance_cm, which will be used later.
+
+#### Lines 15-17
 
 ## Final Product
