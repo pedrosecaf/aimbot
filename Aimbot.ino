@@ -32,8 +32,8 @@ void setup() {
 
   digitalWrite(motor1pin2, LOW);
   digitalWrite(motor2pin2, LOW);  
-  analogWrite(9, 0);
-  analogWrite(5, 0);
+  analogWrite(motor1pin1, 0);
+  analogWrite(motor2pin1, 0);
 
   Serial.begin(9600);
   irrecv.enableIRIn();  
