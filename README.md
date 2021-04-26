@@ -195,4 +195,4 @@ Waits for 500 miliseconds and resumes the process of receiving IR signals.
 
 ## Video
 
-Link: https://usfedu-my.sharepoint.com/:v:/g/personal/psecafrodrig_usf_edu/EbqxybTKl19HhzCr1qYRJEsBZZM-fB5Hkg3UIJMVThhR2w?e=Bdx7mp
+Link: https://usfedu-my.sharepoint.com/:v:/g/personal/psecafrodrig_usf_edu/EbKwIWKQgalBt6Vwri3cx3YBA7s31jwjANJVWIU0S6m7ZQ?e=mL1ax3
